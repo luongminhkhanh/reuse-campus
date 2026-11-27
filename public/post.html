@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng tin – ReUse Campus</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container form-page">
+    <h1>Đăng tin mới</h1>
+    <p class="muted">Bán lại, trao đổi hoặc tặng món đồ bạn không còn dùng tới.</p>
+
+    <form id="post-form" class="panel" novalidate>
+      <div id="form-error" class="form-error hidden"></div>
+
+      <div class="type-picker">
+        <input type="radio" name="type" id="t-sell" value="sell" checked>
+        <label for="t-sell"><span class="ic">🏷️</span>Bán<small>Đặt giá bán</small></label>
+        <input type="radio" name="type" id="t-exchange" value="exchange">
+        <label for="t-exchange"><span class="ic">🔁</span>Trao đổi<small>Đổi lấy món khác</small></label>
+        <input type="radio" name="type" id="t-give" value="give">
+        <label for="t-give"><span class="ic">🎁</span>Tặng<small>Cho miễn phí</small></label>
+      </div>
+
+      <label>Tiêu đề *
+        <input name="title" maxlength="100" required placeholder="VD: Giáo trình Kinh tế vi mô, còn mới 90%">
+      </label>
+
+      <div class="form-row">
+        <label>Danh mục *
+          <select name="category" required><option value="">— Chọn danh mục —</option></select>
+        </label>
+        <label>Tình trạng
+          <select name="item_condition"></select>
+        </label>
+      </div>
+
+      <div class="form-row">
+        <label id="price-field"><span id="price-label">Giá bán (đ) *</span>
+          <input name="price" type="number" min="0" step="1000" placeholder="VD: 50000">
+        </label>
+        <label>Khu vực giao dịch
+          <input name="location" maxlength="100" placeholder="VD: KTX khu A, Cầu Giấy">
+        </label>
+      </div>
+
+      <label id="wanted-field" class="hidden">Bạn muốn đổi lấy gì? *
+        <input name="wanted" maxlength="300" placeholder="VD: Tai nghe bluetooth hoặc chuột không dây">
+      </label>
+
+      <label>Mô tả
+        <textarea name="description" maxlength="2000" rows="5" placeholder="Tình trạng chi tiết, thời gian đã dùng, lý do bán, cách giao nhận…"></textarea>
+      </label>
+
+      <label class="image-drop" id="image-drop">
+        <img id="preview" class="hidden" alt="Ảnh xem trước">
+        <span id="image-hint">📷 Bấm để chọn ảnh (JPG/PNG/WEBP, tối đa 3MB)</span>
+        <input type="file" name="image" accept="image/jpeg,image/png,image/webp,image/gif">
+      </label>
+
+      <div style="display:flex; gap:10px; justify-content:flex-end; margin-top:18px">
+        <a class="btn" href="/">Huỷ</a>
+        <button class="btn primary" type="submit" id="submit-btn">Đăng tin</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/post.js"></script>
+</body>
+</html>

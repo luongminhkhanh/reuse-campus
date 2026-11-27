@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng nhập – ReUse Campus</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main class="container auth-box">
+    <div class="panel">
+      <div class="tabs">
+        <button class="tab active" data-tab="login">Đăng nhập</button>
+        <button class="tab" data-tab="register">Đăng ký</button>
+      </div>
+      <div id="auth-error" class="form-error hidden"></div>
+
+      <form id="login-form">
+        <label>Email <input name="email" type="email" required autocomplete="email"></label>
+        <label>Mật khẩu <input name="password" type="password" required autocomplete="current-password"></label>
+        <button class="btn primary block" type="submit">Đăng nhập</button>
+        <div class="demo-accounts">
+          Tài khoản dùng thử (mật khẩu <code>123456</code>):
+          <button type="button" data-demo="an@sv.edu.vn">An</button>,
+          <button type="button" data-demo="binh@sv.edu.vn">Bình</button>,
+          <button type="button" data-demo="chi@sv.edu.vn">Chi</button> ·
+          Quản trị: <button type="button" data-demo="admin@reusecampus.vn" data-pw="admin123">admin</button>
+        </div>
+      </form>
+
+      <form id="register-form" class="hidden">
+        <label>Họ và tên * <input name="name" required maxlength="60" autocomplete="name"></label>
+        <label>Email * <input name="email" type="email" required autocomplete="email"></label>
+        <label>Mật khẩu * <small>(ít nhất 6 ký tự)</small><input name="password" type="password" required minlength="6" autocomplete="new-password"></label>
+        <div class="form-row">
+          <label>Trường <input name="school" maxlength="100" placeholder="VD: ĐH Bách Khoa"></label>
+          <label>Số điện thoại <input name="phone" maxlength="20" autocomplete="tel"></label>
+        </div>
+        <button class="btn primary block" type="submit">Tạo tài khoản</button>
+      </form>
+    </div>
+  </main>
+  <script src="/js/common.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>

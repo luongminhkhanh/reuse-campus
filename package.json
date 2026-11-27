@@ -1,0 +1,18 @@
+{
+  "name": "reuse-campus",
+  "version": "1.0.0",
+  "description": "ReUse Campus – Chợ đồ cũ sinh viên",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "reset-db": "node -e \"require('fs').rmSync('data/reuse.db',{force:true});console.log('Đã xoá CSDL, chạy lại npm start để tạo dữ liệu mẫu')\""
+  },
+  "engines": { "node": ">=22.13" },
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "multer": "^2.0.2"
+  }
+}
