@@ -23,6 +23,17 @@ Muốn làm lại từ đầu: `npm run reset-db` rồi `npm start`.
 | Sinh viên | an@sv.edu.vn / binh@sv.edu.vn / chi@sv.edu.vn | 123456 |
 | Quản trị viên | admin@reusecampus.vn | admin123 |
 
+## Triển khai lên VPS (Ubuntu)
+
+Mở terminal SSH của VPS rồi chạy:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/luongminhkhanh/reuse-campus/main/deploy.sh -o deploy.sh && bash deploy.sh
+```
+
+Script sẽ cài Node 22, PM2, nginx, tải code, chạy app ở cổng 3000 và cho nginx chuyển cổng 80 vào app.
+Cập nhật code mới: chạy lại `bash ~/reuse-campus/deploy.sh`.
+
 ## Chức năng
 
 | Chức năng | Ở đâu |

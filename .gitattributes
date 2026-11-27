@@ -1,0 +1,2 @@
+# Script chạy trên Linux phải giữ xuống dòng kiểu LF
+*.sh text eol=lf
